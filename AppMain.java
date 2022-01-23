@@ -17,6 +17,10 @@ public class AppMain {
 																											// ms
 				.connectionTimeout(10 * 1000) // connection timeout ms
 				.fleet("laptop").region("us-phoenix-1").availabilityDomain("phx-ad-1");
+		//For aushburn it would have been ==
+		
+		//region("us-ashburn-1");
+		//availabilityDomain("iad-ad-1");
 
 		MetricReporter metricReporter = builder.build();
 		Metrics.init(metricReporter);
