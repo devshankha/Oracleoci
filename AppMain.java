@@ -21,6 +21,10 @@ public class AppMain {
 		
 		//region("us-ashburn-1");
 		//availabilityDomain("iad-ad-1");
+		//Instead of hardcoding, we could have also done this ==
+		
+			String ad = Location.fromEnvironmentFiles().getAvailabilityDomain().getName();
+		int faultDomain =Location.fromEnvironmentFiles().getFaultDomain().getAsInt();
 
 		MetricReporter metricReporter = builder.build();
 		Metrics.init(metricReporter);
